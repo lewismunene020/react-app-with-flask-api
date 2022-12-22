@@ -27,7 +27,7 @@ function App() {
          <h3> Programming Languages Learnt</h3>
         {languages ? (
 	  <ul>
-	   {languages.map((value ,index)=>{
+	   {languages.map((value)=>{
 	      return  <li>{value.name}</li>;
           })}
 	    
@@ -44,8 +44,8 @@ function fetchData(url ,callBack){
 fetch(url)
    .then((response)=>response.json())
    .then((json)=>{
-	alert(json)
-     callBack(json);   
+	
+     callBack(json.data);   
    });
 
 
