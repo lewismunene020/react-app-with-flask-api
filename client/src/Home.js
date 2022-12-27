@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 
-const NavBar = () => {
+const Home = () => {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
@@ -28,4 +28,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Home;

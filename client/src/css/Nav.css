@@ -1,0 +1,17 @@
+.nav{
+    background-color:#fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 var(--sm-margin);
+}
+
+.nav *{
+    display: flex;
+
+}
+
+.nav .nav-menu {
+    gap: var(--sm-margin);
+}

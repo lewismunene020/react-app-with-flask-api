@@ -2,11 +2,21 @@
 
 
 
+ function fetchData(url ,callBack){	
+    fetch(url)
+       .then((response)=>response.json())
+       .then((json)=>{
+        
+         callBack(json.data);   
+       });
+    
+    
+    
+    }
 
 
 
-
-export {SERVER_URL}
+export {SERVER_URL , fetchData}
 
 
 
