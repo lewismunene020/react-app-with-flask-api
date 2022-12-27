@@ -1,7 +1,7 @@
 import './App.css';
 import {SERVER_URL} from './Utils'
 import {useState , useEffect} from 'react'
-
+import LandingPage from './LandingPage'
 function App() {
   const [languages  , setLanguages]  =  useState(undefined)
  
@@ -22,6 +22,11 @@ function App() {
       
   },[]);
   return (
+<div>
+
+{
+    <LandingPage />
+}	
     
       <header className="App-header">
          <h3> Programming Languages Learnt</h3>
@@ -37,6 +42,7 @@ function App() {
 	  )}
      </header>
     
+</div>
   );
 }
 
