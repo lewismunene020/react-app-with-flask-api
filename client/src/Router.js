@@ -3,19 +3,20 @@ import {
     createBrowserRouter ,
     RouterProvider
   } from  "react-router-dom"
-
-import App from './App'
+import { BrowserRouter , Route , Routes } from 'react-router-dom'
+import Nav from './Nav'
 import Home from "./Home"
 import About from  './components/About'
-import Portfolio from './components/Portfolio';
+import Projects from './components/Projects';
 import Admin from './components/Admin';
 import ErrorPage from './ErrorPage';
 
-export default function Router(){
+ export default function Router(){
     const  router = createBrowserRouter([
         {
           path:"/" ,
-          element: <App />  ,
+          
+          element: <Home />  ,
           errorElement : <ErrorPage />
         },
       
@@ -24,8 +25,8 @@ export default function Router(){
           element:<About />
         },
         {
-          path:"/portfolio/" ,
-          element:<Portfolio />
+          path:"/projects/" ,
+          element:<Projects />
         } ,
       
         {
@@ -50,7 +51,25 @@ export default function Router(){
 
   return (
     <React.StrictMode>
-          <RouterProvider router={router } />
+          <RouterProvider router={router }  />
     </React.StrictMode>
   )
 }
+
+
+
+// export  default function Router() {
+//   return (
+//     <BrowserRouter>
+//       <Nav />
+//       <Routes>
+//           <Route exact path="/" component={Home} errorElement={ErrorPage} />
+//           <Route path="/about" component={About} />
+//           <Route path="/projects" component={Projects} />
+
+//       </Routes>
+     
+//     </BrowserRouter>
+//   )
+// }
+
